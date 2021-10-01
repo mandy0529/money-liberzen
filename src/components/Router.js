@@ -1,14 +1,23 @@
-import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import React from 'react';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Error from '../pages/Error';
+import {About, Contact, Home, Shop} from '../pages';
+import {Footer, Navbar, Sidebar} from '.';
 
-
-const Router = ()=>{
-    return(
-        <BrowserRouter>
-            <Switch>
-
-            </Switch>
-        </BrowserRouter>
-    )
-}
+const Router = () => {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Sidebar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/shop" exact component={Shop} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="*" component={Error} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
+  );
+};
 export default Router;
