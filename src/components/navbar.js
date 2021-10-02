@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {FaBars} from 'react-icons/fa';
 import {useGlobalContext} from '../context/AppContext';
 import NavList from './NavList';
+import logoBlack from '../assets/black-white-stich.png';
 
 const Navbar = () => {
   const {openSidebar} = useGlobalContext();
@@ -11,7 +12,7 @@ const Navbar = () => {
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
-          <h2>Liberzen</h2>
+          <img src={logoBlack} alt="logo-black" />
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
@@ -41,9 +42,15 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      width: 175px;
+      width: 150px;
       margin-left: -15px;
+      transition: all 200ms linear;
+      &:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
     }
+
     h2 {
       color: white;
     }
@@ -71,6 +78,12 @@ const NavContainer = styled.nav`
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
+    }
+    .nav-header {
+      img {
+        width: 200px;
+        height: 2.7rem;
+      }
     }
     .nav-links {
       display: flex;

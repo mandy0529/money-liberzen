@@ -7,5 +7,19 @@ import Timeline from './Timeline';
 import Sidebar from './Sidebar';
 import Work from './Work';
 import Touch from './Touch';
+import Company from './Company';
+import MainProduct from './MainProduct';
 
-export {Footer, Hero, Navbar, Work, Touch, Label, Main, Timeline, Sidebar};
+export {
+  Footer,
+  Hero,
+  Navbar,
+  Work,
+  Touch,
+  Label,
+  Main,
+  Timeline,
+  Sidebar,
+  Company,
+  MainProduct,
+};

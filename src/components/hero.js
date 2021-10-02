@@ -13,12 +13,11 @@ const Hero = () => {
         </h1>
         <div className="underline" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-          laudantium laborum! Libero laudantium necessitatibus dolore ducimus
-          facere mollitia ut, enim doloremque deleniti expedita natus ipsum
-          accusantium sunt illo quasi harum.
+          <strong>Live</strong> Your Dream. <br />
+          <strong>Wear</strong> Your Passion. <br />
+          You Can Get It With <strong>Liberzen </strong>,
         </p>
-        <Link to="/products" className="btn hero-btn">
+        <Link to="/shop" className="btn hero-btn">
           shop now
         </Link>
       </article>
@@ -34,12 +33,14 @@ const Wrapper = styled.section`
   min-height: 100vh;
   display: grid;
   place-items: center;
+  margin-top: 50px;
   .main-img {
     width: 100%;
-    height: 240px;
+    height: 280px;
   }
   .accent-img {
-    display: none;
+    width: 150px;
+    transform: translate(-50%, -20%);
   }
 
   .underline {
@@ -48,13 +49,19 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
     background: teal;
   }
+  h1 {
+    font-size: 30px;
+  }
 
   p {
     line-height: 2;
     max-width: 45em;
     margin-bottom: 2rem;
     color: var(--clr-grey-5);
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  strong {
+    font-size: 1.5rem;
   }
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
@@ -62,6 +69,7 @@ const Wrapper = styled.section`
     gap: 8rem;
     h1 {
       margin-bottom: 2rem;
+      font-size: 50px;
     }
     p {
       font-size: 1.25rem;
