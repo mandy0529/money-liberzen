@@ -5,19 +5,19 @@ import {clothes} from '../utils/constants';
 const Timeline = () => {
   return (
     <Wrapper className="section-center">
-      <section class="section timeline">
-        <div class="section-title">
+      <section className="section timeline">
+        <div className="section-title">
           <h2>timeline</h2>
-          <div class="underline"></div>
+          <div className="underline"></div>
         </div>
-        <div class="section-center timeline-center">
+        <div className="section-center timeline-center">
           {clothes.map((item) => {
-            const {text, year, number} = item;
+            const {id, text, year, number} = item;
             return (
-              <article class="timeline-item">
-                <h4>{year}</h4>
+              <article key={id} className="timeline-item">
+                <h3>{year}</h3>
                 <p>{text}</p>
-                <span class="number">{number}</span>
+                <span className="number">{number}</span>
               </article>
             );
           })}
@@ -29,11 +29,16 @@ const Timeline = () => {
 
 const Wrapper = styled.section`
   text-align: center;
+  color: #463f3a;
+  p {
+    color: #463f3a;
+    font-size: 23px;
+  }
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin: 2rem auto 1.25rem auto;
-    background: teal;
+    background: #463f3a;
   }
   .cloth-img {
     width: 250px;

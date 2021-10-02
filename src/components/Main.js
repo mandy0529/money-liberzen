@@ -18,7 +18,7 @@ const FeaturedProducts = () => {
             .slice(0, 3)}
         </div>
       </div>
-      <Link to="/products" className="btn">
+      <Link to="/shop" className="btn">
         All Products
       </Link>
     </Wrapper>
@@ -26,7 +26,8 @@ const FeaturedProducts = () => {
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-grey-10);
+  background: #fafafa;
+  color: #463f3a;
   .featured {
     margin: 4rem auto;
     display: grid;
@@ -37,7 +38,7 @@ const Wrapper = styled.section`
   }
   .btn {
     display: block;
-    width: 148px;
+    width: 180px;
     margin: 0 auto;
     text-align: center;
   }

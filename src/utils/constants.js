@@ -13,6 +13,9 @@ import {
   cloth6,
   cloth7,
   cloth8,
+  store1,
+  store2,
+  store3
 } from '../assets';
 
 export const links = [
@@ -94,3 +97,23 @@ export const clothes = [
     text: ' 현재 Liberzen ',
   },
 ];
+export const stores = [
+  {
+    id: 'st_1',
+    title: 'store1',
+    src: store1,
+    text: 'store place',
+  },
+  {
+    id: 'st_2',
+    title: 'store2',
+    src: store2,
+    text: 'store place',
+  },
+  {
+    id: 'st_3',
+    title: 'store3',
+    src: store3,
+    text: 'store place',
+  },
+]

@@ -24,6 +24,7 @@ const Wrapper = styled.article`
     position: relative;
     background: var(--clr-black);
     border-radius: var(--radius);
+    transition: all 300ms linear;
   }
 
   img {
@@ -38,7 +39,7 @@ const Wrapper = styled.article`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--clr-primary-5);
+    background: #463f3a;
     display: flex;
     align-items: center;
     justify-content: center;

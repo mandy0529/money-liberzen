@@ -1,5 +1,5 @@
 import React from 'react';
-import {Company, Hero, Label, Main, Timeline, Touch, Work} from '../components';
+import {Company, Hero, Label, Main, Timeline, Work} from '../components';
 
 const Home = () => {
   return (
@@ -10,8 +10,6 @@ const Home = () => {
       <Label />
       <Work />
       <Timeline />
-
-      <Touch />
     </>
   );
 };

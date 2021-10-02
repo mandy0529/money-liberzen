@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import {useGlobalContext} from '../context/AppContext';
 import {links} from '../utils/constants';
 import styled from 'styled-components';
 

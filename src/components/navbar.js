@@ -1,10 +1,9 @@
 import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 import {FaBars} from 'react-icons/fa';
 import {useGlobalContext} from '../context/AppContext';
 import NavList from './NavList';
-import logoBlack from '../assets/black-white-stich.png';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const {openSidebar} = useGlobalContext();
@@ -12,7 +11,9 @@ const Navbar = () => {
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logoBlack} alt="logo-black" />
+          <Link to="/">
+            <h3>LIBERZEN</h3>
+          </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
@@ -30,7 +31,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: teal;
+  background-color: #463f3a;
 
   .nav-center {
     width: 90vw;
@@ -41,18 +42,11 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
-      width: 150px;
-      margin-left: -15px;
-      transition: all 200ms linear;
-      &:hover {
-        transform: scale(1.03);
-        cursor: pointer;
-      }
-    }
 
-    h2 {
+    h3 {
       color: white;
+      letter-spacing: 0.4rem;
+      margin: 0;
     }
   }
   .nav-toggle {

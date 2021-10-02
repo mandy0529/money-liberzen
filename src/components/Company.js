@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {ImArrowDown} from 'react-icons/im';
-
-import fashion1 from '../assets/fashion1.jpeg';
+import fashion1 from '../assets/model.jpeg';
 
 const Company = () => {
   return (
@@ -16,12 +15,14 @@ const Company = () => {
             <div className="logo-desc">
               <h3>Founded | 2021 . 08</h3>
               <h3>CEO | 서 미 령</h3>
+              <br />
               <p>
                 liberty + Citizen <br />
                 <ImArrowDown />
                 <br />
-                LIBERZEN <br /> 자유를 추구하는 현대 도시인을 위한 옷을
-                만듭니다.
+                LIBERZEN
+                <br /> <br />
+                자유를 추구하는 현대 도시인을 위한 옷
               </p>
             </div>
           </div>
@@ -32,21 +33,28 @@ const Company = () => {
 };
 
 const Wrapper = styled.section`
+  background: #202124;
+  color: white;
   */ .title {
     h2 {
       letter-spacing: 4px;
     }
   }
+
   .featured {
     margin: 4rem auto;
-
     img {
       width: 300px;
       height: 400px;
+      border-radius: 10px;
+      box-shadow: 0px -1px 17px 5px rgba(255, 255, 255, 0.75);
+      -webkit-box-shadow: 0px -1px 17px 5px rgba(255, 255, 255, 0.75);
+      -moz-box-shadow: 0px -1px 17px 5px rgba(255, 255, 255, 0.75);
     }
   }
   h2 {
     display: none;
+    color: white;
   }
 
   .logo-info {
@@ -59,6 +67,8 @@ const Wrapper = styled.section`
     p {
       margin: 30px;
       font-size: 25px;
+      color: #f4f3ee;
+      font-weight: bold;
     }
   }
   .logo-info:first-child {
@@ -69,7 +79,7 @@ const Wrapper = styled.section`
     height: 0.25rem;
     margin-bottom: 1.25rem;
     margin-top: 2rem;
-    background: teal;
+    background: #f4f3ee;
   }
   .btn {
     display: block;

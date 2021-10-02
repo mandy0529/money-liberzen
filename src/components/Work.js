@@ -29,14 +29,16 @@ const Work = () => {
 };
 
 const Wrapper = styled.section`
-  background: #f2f2f2;
+  background: #fafafa;
   padding: 5rem 0;
+  color: #463f3a;
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin: 2rem auto 1.25rem auto;
-    background: teal;
+    background: #463f3a;
   }
+
   h1 {
     text-align: center;
   }
@@ -47,6 +49,7 @@ const Wrapper = styled.section`
   p {
     margin-bottom: 0;
     line-height: 1.8;
+    color: #463f3a;
   }
   .services-center {
     margin-top: 4rem;
@@ -70,8 +73,9 @@ const Wrapper = styled.section`
       -moz-box-shadow: 5px 10px 31px 1px rgba(0, 0, 0, 0.75);
     }
     span {
-      background-color: var(--clr-grey-9);
+      background-color: #463f3a;
       margin-top: 30px;
+      color: white;
     }
   }
   span {

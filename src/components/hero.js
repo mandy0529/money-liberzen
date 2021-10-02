@@ -17,8 +17,8 @@ const Hero = () => {
           <strong>Wear</strong> Your Passion. <br />
           You Can Get It With <strong>Liberzen </strong>,
         </p>
-        <Link to="/shop" className="btn hero-btn">
-          shop now
+        <Link to="/contact" className="btn hero-btn">
+          Contact Us
         </Link>
       </article>
       <article className="img-container">
@@ -34,20 +34,28 @@ const Wrapper = styled.section`
   display: grid;
   place-items: center;
   margin-top: 50px;
+  color: #463f3a;
   .main-img {
     width: 100%;
     height: 280px;
+    box-shadow: -1px -1px 62px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px -1px 62px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px -1px 62px -5px rgba(0, 0, 0, 0.75);
   }
   .accent-img {
+    display: none;
     width: 150px;
     transform: translate(-50%, -20%);
+    box-shadow: -22px 13px 62px -9px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -22px 13px 62px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -22px 13px 62px -9px rgba(0, 0, 0, 0.75);
   }
 
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin-bottom: 1.25rem;
-    background: teal;
+    background: #463f3a;
   }
   h1 {
     font-size: 30px;
@@ -57,7 +65,7 @@ const Wrapper = styled.section`
     line-height: 2;
     max-width: 45em;
     margin-bottom: 2rem;
-    color: var(--clr-grey-5);
+    color: #463f3a;
     font-size: 1.2rem;
   }
   strong {
@@ -91,6 +99,7 @@ const Wrapper = styled.section`
       object-fit: cover;
     }
     .accent-img {
+      display: block;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -103,7 +112,7 @@ const Wrapper = styled.section`
       position: absolute;
       width: 10%;
       height: 80%;
-      background: teal;
+      background: #463f3a;
       bottom: 0%;
       left: -8%;
       border-radius: var(--radius);

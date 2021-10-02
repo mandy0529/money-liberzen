@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {FaTimes} from 'react-icons/fa';
+import {RiCloseFill} from 'react-icons/ri';
 import {useGlobalContext} from '../context/AppContext';
 import NavList from './NavList';
 
@@ -12,7 +12,7 @@ const Sidebar = () => {
         <div className="sidebar-header">
           <h2>liberzen</h2>
           <button className="close-btn" type="button" onClick={closeSidebar}>
-            <FaTimes />
+            <RiCloseFill />
           </button>
         </div>
         <ul className="links">
@@ -25,6 +25,10 @@ const Sidebar = () => {
 
 const SidebarContainer = styled.div`
   text-align: center;
+  color: #463f3a;
+  h2 {
+    margin: 0;
+  }
   .sidebar-header {
     display: flex;
     justify-content: space-between;
@@ -35,14 +39,13 @@ const SidebarContainer = styled.div`
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
-    color: var(--clr-primary-5);
     transition: var(--transition);
     cursor: pointer;
-    color: var(--clr-red-dark);
     margin-top: 0.2rem;
   }
   .close-btn:hover {
-    color: var(--clr-red-light);
+    font-weight: bold;
+    transform: scale(1.14);
   }
   .logo {
     justify-self: center;
@@ -57,7 +60,7 @@ const SidebarContainer = styled.div`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
-    color: var(--clr-grey-3);
+    color: #463f3a;
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
@@ -65,8 +68,9 @@ const SidebarContainer = styled.div`
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-2);
+    background: #463f3a;
+    color: white;
+    font-weight: bold;
   }
 
   .sidebar {
