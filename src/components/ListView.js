@@ -11,16 +11,15 @@ const ListView = ({eachYear}) => {
         clothes.map((item) => {
           const {id, name, img} = item;
           return (
-            <article key={id}>
-              <h5>
-                {eachYear} - {name && name}월
-              </h5>
+            <main key={id} className="main-container">
+              <h4>{name}</h4>
+
               {img &&
                 img.map((image) => {
                   const {id, name, url} = image;
                   return <img key={id} src={url} alt={name} />;
                 })}
-            </article>
+            </main>
           );
         })}
     </Wrapper>
@@ -28,21 +27,26 @@ const ListView = ({eachYear}) => {
 };
 
 const Wrapper = styled.section`
+  .main-container {
+    text-align: center;
+    border-bottom: 1px dotted black;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    color: black;
+  }
+
   img {
-    width: 200px;
-    height: 200px;
+    width: 90px;
     border-radius: 5px;
-    margin: 0.7rem;
+    margin: 0.4rem;
+    box-shadow: 2px 4px 7px -2px rgba(66, 62, 62, 0.75);
+    -webkit-box-shadow: 2px 4px 7px -2px rgba(66, 62, 62, 0.75);
+    -moz-box-shadow: 2px 4px 7px -2px rgba(66, 62, 62, 0.75);
   }
 
-  .products-container {
-    display: grid;
-    gap: 2rem 1.5rem;
-  }
-
-  @media (min-width: 992px) {
-    .products-container {
-      grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) {
+    img {
+      width: 220px;
     }
   }
   @media (min-width: 1170px) {

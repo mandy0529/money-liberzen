@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {useGlobalContext} from '../context/AppContext';
 
-const GridView = ({eachYear}) => {
+const GridView = () => {
   const {clothes} = useGlobalContext();
 
   return (
@@ -11,16 +11,14 @@ const GridView = ({eachYear}) => {
         clothes.map((item) => {
           const {id, name, img} = item;
           return (
-            <article key={id}>
-              <h5>
-                {eachYear} - {name && name}월
-              </h5>
+            <main className="main-container" key={id}>
+              <h5>{name && name}</h5>
               {img &&
                 img.map((image) => {
                   const {id, name, url} = image;
                   return <img key={id} src={url} alt={name} />;
                 })}
-            </article>
+            </main>
           );
         })}
     </Wrapper>
@@ -28,27 +26,33 @@ const GridView = ({eachYear}) => {
 };
 
 const Wrapper = styled.section`
+  .main-container {
+    border-bottom: 1px dotted black;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    color: black;
+    text-align: center;
+  }
   img {
     width: 300px;
-    height: 300px;
+    height: 100%;
     border-radius: 5px;
     margin: 0.7rem;
+    box-shadow: 2px 4px 7px -2px rgba(66, 62, 62, 0.75);
+    -webkit-box-shadow: 2px 4px 7px -2px rgba(66, 62, 62, 0.75);
+    -moz-box-shadow: 2px 4px 7px -2px rgba(66, 62, 62, 0.75);
   }
 
-  .products-container {
-    display: grid;
-    gap: 2rem 1.5rem;
-  }
-
-  @media (min-width: 992px) {
-    .products-container {
-      grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) {
+    .main-container {
+      text-align: left;
+    }
+    img {
+      width: 200px;
+      height: 200px;
     }
   }
   @media (min-width: 1170px) {
-    .products-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 `;
 

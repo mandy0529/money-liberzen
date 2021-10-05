@@ -48,7 +48,7 @@ const Wrapper = styled.section`
     margin: 4rem auto;
     img {
       max-height: 105px;
-      width: 40%;
+      width: 90%;
       margin-bottom: 1rem;
     }
   }
@@ -91,6 +91,11 @@ const Wrapper = styled.section`
   @media (min-width: 576px) {
     .logo-info {
       flex-direction: row;
+    }
+    .featured {
+      img {
+        width: 40%;
+      }
     }
   }
 `;

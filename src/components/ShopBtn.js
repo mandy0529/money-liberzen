@@ -23,7 +23,8 @@ const ShopBtn = ({location: {pathname}}) => {
             <h5>Collections</h5>
             <div>
               {category.length > 1 &&
-                category.map(({id, name}) => {
+                category.map((item) => {
+                  const {name, id} = item;
                   return (
                     <Link key={id} to={`/shop/${id}`}>
                       <button

@@ -11,7 +11,7 @@ export const initialState = {
   loading: true,
   isOpen: false,
   clothes: [],
-  grid_view: false,
+  grid_view: true,
 };
 
 const reducer = (state, action) => {

@@ -7,7 +7,9 @@ const ShopList = ({eachYear}) => {
   const {clothes, grid_view, fetchData, loading} = useGlobalContext();
 
   useEffect(() => {
-    fetchData(eachYear);
+    if (eachYear) {
+      fetchData(eachYear);
+    }
   }, [eachYear]);
 
   if (loading) {
@@ -17,7 +19,7 @@ const ShopList = ({eachYear}) => {
   if (grid_view === false) {
     return <ListView clothes={clothes} eachYear={eachYear} />;
   }
-  return <>{<GridView eachYear={eachYear} />}</>;
+  return <GridView eachYear={eachYear} />;
 };
 
 export default ShopList;

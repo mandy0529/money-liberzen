@@ -3,7 +3,6 @@ import Hero from './Hero';
 import Navbar from './Navbar';
 import Label from './Label';
 import Main from './Main';
-import Timeline from './Timeline';
 import Sidebar from './Sidebar';
 import Work from './Work';
 import Company from './Company';
@@ -16,6 +15,8 @@ import ShopBtn from './ShopBtn';
 import ShopHero from './ShopHero';
 import ShopSort from './ShopSort';
 import Video from './Video';
+import Loader from './Loader';
+
 export {
   Footer,
   Hero,
@@ -23,9 +24,9 @@ export {
   Work,
   Label,
   Main,
-  Timeline,
   Sidebar,
   Company,
+  Loader,
   MainProduct,
   Story,
   Store,

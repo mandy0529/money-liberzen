@@ -21,7 +21,7 @@ const AppProvider = ({children}) => {
     dispatch({type: SET_LOADING});
     try {
       const {data} = await axios(`${API_START_POINT}/${year}`);
-      const yearData = data.sort((a, b) => a.name - b.name);
+      const yearData = data.sort((a, b) => a.month - b.month);
       dispatch({type: GET_DATA, payload: yearData});
     } catch (error) {
       throw new Error('not fetched any datas');

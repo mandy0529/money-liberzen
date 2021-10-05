@@ -32,7 +32,7 @@ export const links = [
   {
     id: 3,
     text: 'shop',
-    url: '/shop',
+    url: '/shop/2021',
   },
   {
     id: 4,
@@ -68,7 +68,7 @@ export const clothes = [
     id: 'li_3308',
     title: 'cloth8',
     src: cloth8,
-    year: 2001,
+    year: 2021,
     number: 1,
     text: 'Founded company 2001 . 08',
   },
@@ -76,7 +76,7 @@ export const clothes = [
     id: 'li_3307',
     title: 'cloth7',
     src: cloth7,
-    year: 2015,
+    year: 2020,
     number: 2,
     text: 'Liberzen 행사',
   },
