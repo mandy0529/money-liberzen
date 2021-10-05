@@ -15,7 +15,7 @@ import ShopList from './ShopList';
 import ShopBtn from './ShopBtn';
 import ShopHero from './ShopHero';
 import ShopSort from './ShopSort';
-
+import Video from './Video';
 export {
   Footer,
   Hero,
@@ -34,4 +34,5 @@ export {
   ShopHero,
   ShopBtn,
   ShopSort,
+  Video,
 };

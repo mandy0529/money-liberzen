@@ -31,7 +31,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #463f3a;
+  background-color: black;
 
   .nav-center {
     width: 90vw;

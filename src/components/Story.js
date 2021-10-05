@@ -1,22 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
-import model from '../assets/model.jpeg';
+import video from '../assets/liberzen.mp4';
 
 const Story = () => {
   return (
-    <main>
+    <main className="story-main">
       <Wrapper className="page section section-center">
-        <img src={model} className="" alt="nice desk" />
-        <article>
-          <div className="title">
-            <h2>our story</h2>
-            <div className="underline"></div>
-          </div>
+        <article className="img-container">
+          <video
+            className="video-content"
+            src={video}
+            playsInline
+            muted={true}
+            autoPlay={true}
+            loop
+          />
+        </article>
+        <article className="content">
+          <h1>
+            LIBERZEN <br />
+          </h1>
+          <div className="underline" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            voluptates possimus deleniti nulla maiores. Mollitia doloremque quo,
-            sed dolore temporibus nam hic voluptatum consequuntur magnam,
-            veritatis ad ipsa ipsam dolor?
+            <strong>Live</strong> your dream. <br />
+            <strong>Wear</strong> your Passion.
+            <br />
+            You can get it with Liberzen, <br />
           </p>
         </article>
       </Wrapper>
@@ -25,40 +34,92 @@ const Story = () => {
 };
 
 const Wrapper = styled.section`
-  display: grid;
-  gap: 4rem;
-  img {
+  margin-top: 3rem;
+  min-height: 80vh;
+  .main-img {
+    width: 100%;
+    height: 240px;
+  }
+  .video-content {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: -3px 7px 42px -1px rgba(0, 0, 0, 0.69);
+    -webkit-box-shadow: -3px 7px 42px -1px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: -3px 7px 42px -1px rgba(0, 0, 0, 0.69);
+    border-radius: 10px;
+  }
+  .accent-img {
+    display: none;
+  }
+  .img-container {
     width: 100%;
     display: block;
-    border-radius: var(--radius);
-    height: 500px;
-    object-fit: cover;
+    position: relative;
+    margin-bottom: 4rem;
   }
-  p {
-    line-height: 2;
-    max-width: 45em;
-    margin: 0 auto;
-    margin-top: 2rem;
-    color: var(--clr-grey-5);
+  .content {
+    width: 100%;
+    height: 50%;
   }
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .title {
-    text-align: left;
-  }
+
   .underline {
     width: 8rem;
     height: 0.25rem;
-    margin: 2rem 0 1.25rem 0;
-    background: #463f3a;
+    background: black;
+  }
+
+  p {
+    line-height: 2;
+    max-width: 45em;
+    margin: 2rem 0;
+    color: black;
+    font-size: 1rem;
   }
   @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
-    img {
-      height: 650px;
+    margin-top: 0rem;
+    height: calc(100vh - 5rem);
+    grid-template-columns: 2fr 1fr;
+    gap: 8rem;
+    display: grid;
+    place-items: center;
+    h1 {
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+    .hero-btn {
+      width: 70%;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .img-container {
+      width: 40vw;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .main-img {
+      width: 100%;
+      height: 550px;
+      position: relative;
+      border-radius: var(—radius);
+      display: block;
+      object-fit: cover;
+    }
+    .accent-img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 250px;
+      transform: translateX(-50%);
+      border-radius: var(—radius);
     }
   }
 `;

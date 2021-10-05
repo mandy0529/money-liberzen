@@ -25,7 +25,7 @@ const Sidebar = () => {
 
 const SidebarContainer = styled.div`
   text-align: center;
-  color: #463f3a;
+  color: black;
   h2 {
     margin: 0;
   }
@@ -60,7 +60,7 @@ const SidebarContainer = styled.div`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
-    color: #463f3a;
+    color: black;
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
@@ -68,7 +68,7 @@ const SidebarContainer = styled.div`
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
-    background: #463f3a;
+    background: black;
     color: white;
     font-weight: bold;
   }

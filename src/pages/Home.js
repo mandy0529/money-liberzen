@@ -1,10 +1,10 @@
 import React from 'react';
-import {Company, Hero, Label, Main, Timeline, Work} from '../components';
+import {Company, Label, Main, Timeline, Video, Work} from '../components';
 
 const Home = () => {
   return (
     <>
-      <Hero />
+      <Video />
       <Main />
       <Company />
       <Label />

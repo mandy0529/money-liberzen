@@ -1,23 +1,44 @@
 import React from 'react';
+import {Link, withRouter} from 'react-router-dom';
 import styled from 'styled-components';
-import {clothes} from '../utils/constants';
 
-const ShopBtn = () => {
+const category = [
+  {id: 2014, name: '2014'},
+  {id: 2015, name: '2015'},
+  {id: 2016, name: '2016'},
+  {id: 2017, name: '2017'},
+  {id: 2018, name: '2018'},
+  {id: 2019, name: '2019'},
+  {id: 2020, name: '2020'},
+  {id: 2021, name: '2021'},
+];
+
+const ShopBtn = ({location: {pathname}}) => {
+  const year = pathname.substr(6);
   return (
     <Wrapper>
       <div className="content">
-        <div className="form-contorl">
-          <h5>Year</h5>
-          <div>
-            {clothes.map((item) => {
-              return (
-                <button name="category" key={item.id} value={item.year}>
-                  {item.year}
-                </button>
-              );
-            })}
+        <form onSubmit={(e) => e.preventDefault()}>
+          <div className="form-control">
+            <h5>Collections</h5>
+            <div>
+              {category.length > 1 &&
+                category.map(({id, name}) => {
+                  return (
+                    <Link key={id} to={`/shop/${id}`}>
+                      <button
+                        className={`${name === year ? 'active' : null}`}
+                        name="category"
+                        key={id}
+                      >
+                        {name}
+                      </button>
+                    </Link>
+                  );
+                })}
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </Wrapper>
   );
@@ -27,7 +48,7 @@ const Wrapper = styled.section`
   .form-control {
     margin-bottom: 1.25rem;
     h5 {
-      margin-bottom: 0.5rem;
+      margin: 1rem 0;
     }
   }
   .search-input {
@@ -43,18 +64,27 @@ const Wrapper = styled.section`
 
   button {
     display: block;
-    margin: 0.25em 0;
+    margin: 0.7em 0;
     padding: 0.25rem 0;
     text-transform: capitalize;
+    text-align: center;
     background: transparent;
     border: none;
-    border-bottom: 1px solid transparent;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    padding: 5px;
+    border-radius: 3px;
+    color: black;
     cursor: pointer;
+    transition: all 300ms linear;
+    &:hover {
+      transform: scale(1.09);
+      font-weight: bold;
+    }
   }
   .active {
-    border-color: var(--clr-grey-5);
+    background-color: black;
+    color: white;
+    font-weight: bold;
   }
   .company {
     background: var(--clr-grey-10);
@@ -109,10 +139,10 @@ const Wrapper = styled.section`
     font-size: 1rem;
   }
   .clear-btn {
-    background: var(--clr-red-dark);
-    color: var(--clr-white);
+    background: var(—clr-red-dark);
+    color: var(—clr-white);
     padding: 0.25rem 0.5rem;
-    border-radius: var(--radius);
+    border-radius: var(—radius);
   }
   @media (min-width: 768px) {
     .content {
@@ -122,4 +152,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default ShopBtn;
+export default withRouter(ShopBtn);

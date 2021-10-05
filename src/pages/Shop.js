@@ -1,17 +1,21 @@
 import React from 'react';
+import {useLocation} from 'react-router';
 import styled from 'styled-components';
 import {ShopBtn, ShopHero, ShopList, ShopSort} from '../components';
 
 const Shop = () => {
+  const {pathname} = useLocation();
+  const eachYear = pathname.substr(6, 11);
+
   return (
-    <main>
+    <main style={{backgroundColor: 'white'}}>
       <ShopHero />
       <Wrapper className="page">
         <div className="section-center products">
           <ShopBtn />
           <div>
             <ShopSort />
-            <ShopList />
+            <ShopList eachYear={eachYear} />
           </div>
         </div>
       </Wrapper>

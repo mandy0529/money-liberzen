@@ -15,7 +15,7 @@ import {
   cloth8,
   store1,
   store2,
-  store3
+  store3,
 } from '../assets';
 
 export const links = [
@@ -45,21 +45,21 @@ export const services = [
     id: 1,
     icon: <GiRolledCloth />,
     title: 'Pattern',
-    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    text: 'Any Patterns ',
     src: pattern,
   },
   {
     id: 2,
     icon: <GiClothespin />,
     title: 'Design',
-    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    text: 'Any Designs',
     src: design,
   },
   {
     id: 3,
     icon: <FaStore />,
     title: 'Store',
-    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    text: 'Any Stores',
     src: store,
   },
 ];
@@ -103,17 +103,23 @@ export const stores = [
     title: 'store1',
     src: store1,
     text: 'store place',
+    place: '서울점',
+    phone: '02-3456-7890',
   },
   {
     id: 'st_2',
     title: 'store2',
     src: store2,
     text: 'store place',
+    place: '인천점',
+    phone: '02-3456-7890',
   },
   {
     id: 'st_3',
     title: 'store3',
     src: store3,
     text: 'store place',
+    place: '잠실점',
+    phone: '02-3456-7890',
   },
-]
+];

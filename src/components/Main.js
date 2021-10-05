@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
   return (
     <Wrapper className="section">
       <div className="title">
-        <h2>featured products</h2>
+        <h2>Collections</h2>
         <div className="underline"></div>
         <div className="section-center featured">
           {clothes
@@ -27,7 +27,7 @@ const FeaturedProducts = () => {
 
 const Wrapper = styled.section`
   background: #fafafa;
-  color: #463f3a;
+  color: black;
   .featured {
     margin: 4rem auto;
     display: grid;

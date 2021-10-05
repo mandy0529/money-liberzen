@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import logoGold from '../assets/logoGold.png';
-import logoBlack from '../assets/logoBlack.png';
+import logoWhite from '../assets/logo-white.png';
+import logoBlack from '../assets/logo-black.png';
+import logoBeige from '../assets/logo-beige.png';
 const Label = () => {
   return (
     <Wrapper className="section">
@@ -10,18 +11,25 @@ const Label = () => {
         <div className="underline"></div>
         <div className="section-center featured">
           <div className="logo-info">
-            <div className="logo-desc">
-              <h3>Beige Label</h3>
-              <p>봄, 가을의 베이지</p>
-            </div>
-            <img src={logoGold} alt="gold-logo" />
-          </div>
-          <div className="logo-info">
+            <img src={logoBlack} alt="gold-logo" />
             <div className="logo-desc">
               <h3>Black Label</h3>
               <p>모던한 현대 시민</p>
             </div>
-            <img src={logoBlack} alt="black-logo" />
+          </div>
+          <div className="logo-info">
+            <img src={logoWhite} alt="gold-logo" />
+            <div className="logo-desc">
+              <h3>White Label</h3>
+              <p>사계절의 화이트</p>
+            </div>
+          </div>
+          <div className="logo-info">
+            <img src={logoBeige} alt="black-logo" />
+            <div className="logo-desc">
+              <h3>Beige Label</h3>
+              <p>봄, 가을의 베이지</p>
+            </div>
           </div>
         </div>
       </div>
@@ -30,14 +38,7 @@ const Label = () => {
 };
 
 const Wrapper = styled.section`
-  background: #f4f3ee;
-  color: #463f3a;
-  h3 {
-    font-size: 35px;
-  }
-  .logo-desc {
-    margin-top: 50px;
-  }
+  background: #f3f3ee;
   .title {
     h2 {
       letter-spacing: 4px;
@@ -45,37 +46,41 @@ const Wrapper = styled.section`
   }
   .featured {
     margin: 4rem auto;
-
     img {
-      height: 105px;
+      max-height: 105px;
+      width: 40%;
+      margin-bottom: 1rem;
     }
   }
   .logo-info {
     width: 80%;
-    margin: 10px auto;
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    &:first-child {
-      padding-bottom: 50px;
-      border-bottom: 2px dotted #463f3a;
-    }
-    p {
-      margin: 10px;
-      color: #463f3a;
-      font-size: 25px;
+    .logo-desc {
+      p {
+        margin: 0;
+      }
     }
   }
   .logo-info:first-child {
-    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+  }
+  .logo-info:last-child {
+    padding-top: 1rem;
+  }
+  .logo-info:nth-child(2) {
+    padding: 2rem 0;
+    border-bottom: 3px dotted black;
+    border-top: 3px dotted black;
   }
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin-bottom: 1.25rem;
-    margin-top: 2rem;
-    background: #463f3a;
+    background: var(—back-dark);
   }
   .btn {
     display: block;

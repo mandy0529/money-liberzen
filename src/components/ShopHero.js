@@ -1,35 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link, useLocation} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 const ShopHero = () => {
   const {pathname} = useLocation();
   return (
     <Wrapper>
       <div className="section-center">
-        <h3>
-          <Link to="/"> home </Link> {pathname}
-        </h3>
+        <h3> {pathname && pathname.substring(6, 10)} Collections</h3>
+        <div className="underline" />
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-primary-10);
+  background: #f4f3ee;
   width: 100%;
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   align-items: center;
+  color: black;
 
-  color: var(--clr-primary-1);
+  h3 {
+    margin: 1.5rem 0;
+  }
   a {
-    color: var(--clr-primary-3);
+    color: black;
     padding: 0.5rem;
     transition: var(--transition);
   }
   a:hover {
-    color: var(--clr-primary-1);
+    transform: scale(1.09);
   }
 `;
 

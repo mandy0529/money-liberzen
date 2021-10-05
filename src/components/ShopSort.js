@@ -1,19 +1,36 @@
 import React from 'react';
 import {BsFillGridFill, BsList} from 'react-icons/bs';
 import styled from 'styled-components';
-import {clothes} from '../utils/constants';
+import {useGlobalContext} from '../context/AppContext';
+import {getTotalNumber} from '../utils/helper';
+
 const ShopSort = () => {
+  const {clothes, loading, controlListView, controlGridView, grid_view} =
+    useGlobalContext();
+
+  let totalProduct = clothes.map((item) => {
+    return item.img.length;
+  });
+
   return (
     <Wrapper>
       <div className="btn-container">
-        <button type="button">
+        <button
+          onClick={controlGridView}
+          type="button"
+          className={`${grid_view ? 'active' : null}`}
+        >
           <BsFillGridFill />
         </button>
-        <button type="button">
+        <button
+          onClick={controlListView}
+          className={`${!grid_view ? 'active' : null}`}
+          type="button"
+        >
           <BsList />
         </button>
       </div>
-      <p>{clothes.length} products found</p>
+      <p> {!loading && getTotalNumber(totalProduct)} products found</p>
       <hr />
     </Wrapper>
   );

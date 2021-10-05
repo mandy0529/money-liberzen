@@ -18,7 +18,6 @@ const Work = () => {
                 <img src={src} alt={title} />
                 <span className="icon">{icon}</span>
                 <h4>{title}</h4>
-                <p>{text}</p>
               </article>
             );
           })}
@@ -31,12 +30,12 @@ const Work = () => {
 const Wrapper = styled.section`
   background: #fafafa;
   padding: 5rem 0;
-  color: #463f3a;
+  color: black;
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin: 2rem auto 1.25rem auto;
-    background: #463f3a;
+    background: black;
   }
 
   h1 {
@@ -49,7 +48,7 @@ const Wrapper = styled.section`
   p {
     margin-bottom: 0;
     line-height: 1.8;
-    color: #463f3a;
+    color: black;
   }
   .services-center {
     margin-top: 4rem;
@@ -73,7 +72,7 @@ const Wrapper = styled.section`
       -moz-box-shadow: 5px 10px 31px 1px rgba(0, 0, 0, 0.75);
     }
     span {
-      background-color: #463f3a;
+      background-color: black;
       margin-top: 30px;
       color: white;
     }

@@ -36,7 +36,7 @@ const Wrapper = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #463f3a;
+  background: black;
   text-align: center;
   color: white;
   div {

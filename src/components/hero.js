@@ -9,16 +9,17 @@ const Hero = () => {
     <Wrapper className="section-center">
       <article className="content">
         <h1>
-          Liberzen <br />
+          our story <br />
         </h1>
         <div className="underline" />
         <p>
-          <strong>Live</strong> Your Dream. <br />
-          <strong>Wear</strong> Your Passion. <br />
-          You Can Get It With <strong>Liberzen </strong>,
+          Any Designs,
+          <br /> Any Patterns, <br />
+          Any Fabrics, <br />
+          리버젠의 나다움으로
         </p>
         <Link to="/contact" className="btn hero-btn">
-          Contact Us
+          Contact
         </Link>
       </article>
       <article className="img-container">
@@ -34,7 +35,7 @@ const Wrapper = styled.section`
   display: grid;
   place-items: center;
   margin-top: 50px;
-  color: #463f3a;
+  color: black;
   .main-img {
     width: 100%;
     height: 280px;
@@ -55,7 +56,7 @@ const Wrapper = styled.section`
     width: 8rem;
     height: 0.25rem;
     margin-bottom: 1.25rem;
-    background: #463f3a;
+    background: black;
   }
   h1 {
     font-size: 30px;
@@ -65,7 +66,7 @@ const Wrapper = styled.section`
     line-height: 2;
     max-width: 45em;
     margin-bottom: 2rem;
-    color: #463f3a;
+    color: black;
     font-size: 1.2rem;
   }
   strong {
@@ -112,7 +113,7 @@ const Wrapper = styled.section`
       position: absolute;
       width: 10%;
       height: 80%;
-      background: #463f3a;
+      background: black;
       bottom: 0%;
       left: -8%;
       border-radius: var(--radius);

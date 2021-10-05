@@ -20,9 +20,7 @@ const Company = () => {
                 liberty + Citizen <br />
                 <ImArrowDown />
                 <br />
-                LIBERZEN
-                <br /> <br />
-                자유를 추구하는 현대 도시인을 위한 옷
+                <span> LIBERZEN</span>
               </p>
             </div>
           </div>
@@ -89,6 +87,10 @@ const Wrapper = styled.section`
   }
   .logo-desc {
     margin-top: 3rem;
+    span {
+      font-size: 32px;
+      font-weight: bold;
+    }
   }
   @media (min-width: 576px) {
     .featured {

@@ -12,8 +12,9 @@ const Router = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
-        <Route path="/shop" exact component={Shop} />
+        <Route path="/shop" component={Shop} />
         <Route path="/contact" exact component={Contact} />
+        <Route path="/shop/:id" exact component={Shop} />
         <Route path="*" component={Error} />
       </Switch>
       <Footer />

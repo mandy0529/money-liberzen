@@ -42,13 +42,13 @@ const Contact = () => {
 const Wrapper = styled.section`
   min-height: 100vh;
   margin-top: 50px;
-  color: #463f3a;
+  color: black;
 
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin: 2rem auto 2rem auto;
-    background: #463f3a;
+    background: black;
   }
   div {
     letter-spacing: 0.2rem;
@@ -69,7 +69,7 @@ const Wrapper = styled.section`
   a {
     margin: 5px;
     font-size: 2.3rem;
-    color: #463f3a;
+    color: black;
     &:hover .facebook,
     &:hover .insta {
       transform: scale(0.96);

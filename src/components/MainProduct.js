@@ -39,7 +39,7 @@ const Wrapper = styled.article`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #463f3a;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;

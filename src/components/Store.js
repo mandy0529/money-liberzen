@@ -21,7 +21,7 @@ const Store = () => {
 
 const Wrapper = styled.section`
   background: #f4f3ee;
-  color: #463f3a;
+  color: black;
   .featured {
     margin: 4rem auto;
     display: grid;
@@ -34,7 +34,7 @@ const Wrapper = styled.section`
     width: 8rem;
     height: 0.25rem;
     margin: 2rem auto 2rem auto;
-    background: #463f3a;
+    background: black;
   }
   .btn {
     display: block;

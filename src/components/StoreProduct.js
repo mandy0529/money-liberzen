@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StoreProduct = ({src, text, title}) => {
+const StoreProduct = ({src, text, title, place, phone}) => {
   return (
     <Wrapper>
       <div className="container">
@@ -9,6 +9,8 @@ const StoreProduct = ({src, text, title}) => {
       </div>
       <footer>
         <h5>{text} </h5>
+        <p>{place}</p>
+        <p>{phone}</p>
       </footer>
     </Wrapper>
   );
@@ -34,7 +36,7 @@ const Wrapper = styled.article`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #463f3a;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,9 +54,7 @@ const Wrapper = styled.article`
 
   footer {
     margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: left;
   }
   footer h5,
   footer p {
@@ -63,7 +63,7 @@ const Wrapper = styled.article`
   }
 
   footer p {
-    color: var(--clr-primary-5);
+    opacity: 0.4;
     letter-spacing: var(--spacing);
   }
 `;

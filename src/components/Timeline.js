@@ -29,16 +29,16 @@ const Timeline = () => {
 
 const Wrapper = styled.section`
   text-align: center;
-  color: #463f3a;
+  color: black;
   p {
-    color: #463f3a;
+    color: black;
     font-size: 23px;
   }
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin: 2rem auto 1.25rem auto;
-    background: #463f3a;
+    background: black;
   }
   .cloth-img {
     width: 250px;
