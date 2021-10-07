@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const {openSidebar} = useGlobalContext();
+
   return (
     <NavContainer>
       <div className="nav-center">
@@ -104,3 +105,7 @@ const NavContainer = styled.nav`
 `;
 
 export default Navbar;
+
+// button.addEventListener('click', () => {
+//   rabbit.scrollIntoView({behavior:"smooth", block: "center", inline: "center"});
+// })

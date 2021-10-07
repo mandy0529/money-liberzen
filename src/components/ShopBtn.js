@@ -2,16 +2,16 @@ import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 
-const category = [
-  {id: 2014, name: '2014'},
-  {id: 2015, name: '2015'},
-  {id: 2016, name: '2016'},
-  {id: 2017, name: '2017'},
-  {id: 2018, name: '2018'},
-  {id: 2019, name: '2019'},
-  {id: 2020, name: '2020'},
-  {id: 2021, name: '2021'},
-];
+const category = () => {
+  let max = new Date().getFullYear();
+  let min = 2014;
+  let years = [];
+  for (let i = max; i >= min; i--) {
+    const data = {id: i, name: i};
+    years.push(data);
+  }
+  return years;
+};
 
 const ShopBtn = ({location: {pathname}}) => {
   const year = pathname.substr(6);
@@ -21,14 +21,16 @@ const ShopBtn = ({location: {pathname}}) => {
         <form onSubmit={(e) => e.preventDefault()}>
           <div className="form-control">
             <h5>Collections</h5>
-            <div>
-              {category.length > 1 &&
-                category.map((item) => {
+            <div className="content-btn-box">
+              {category().length > 1 &&
+                category().map((item) => {
                   const {name, id} = item;
                   return (
                     <Link key={id} to={`/shop/${id}`}>
                       <button
-                        className={`${name === year ? 'active' : null}`}
+                        className={`year-btn ${
+                          name === Number(year) ? 'active' : null
+                        }`}
                         name="category"
                         key={id}
                       >
@@ -63,7 +65,7 @@ const Wrapper = styled.section`
     text-transform: capitalize;
   }
 
-  button {
+  .year-btn {
     display: block;
     margin: 0.7em 0;
     padding: 0.25rem 0;
@@ -81,6 +83,10 @@ const Wrapper = styled.section`
       transform: scale(1.09);
       font-weight: bold;
     }
+  }
+  .content-btn-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
   .active {
     background-color: black;
@@ -149,6 +155,9 @@ const Wrapper = styled.section`
     .content {
       position: sticky;
       top: 1rem;
+    }
+    .content-btn-box {
+      display: block;
     }
   }
 `;

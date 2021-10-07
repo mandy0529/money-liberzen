@@ -2,6 +2,7 @@ import React from 'react';
 import {useLocation} from 'react-router';
 import styled from 'styled-components';
 import {ShopBtn, ShopHero, ShopList, ShopSort} from '../components';
+import Modal from '../components/Modal';
 
 const Shop = () => {
   const {pathname} = useLocation();
@@ -9,6 +10,7 @@ const Shop = () => {
 
   return (
     <main style={{backgroundColor: 'white'}}>
+      <Modal />
       <ShopHero />
       <Wrapper className="page">
         <div className="section-center products">

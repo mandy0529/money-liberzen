@@ -1,4 +1,6 @@
 import {
+  clickCloseModal,
+  clickOpenModal,
   GET_DATA,
   SET_GRIDVIEW,
   SET_LISTVIEW,
@@ -12,6 +14,8 @@ export const initialState = {
   isOpen: false,
   clothes: [],
   grid_view: true,
+  isModalOpen: false,
+  monthData: [],
 };
 
 const reducer = (state, action) => {
@@ -34,6 +38,24 @@ const reducer = (state, action) => {
     case GET_DATA:
       return {...state, loading: false, clothes: action.payload};
 
+    case clickOpenModal:
+      const {month} = action.payload;
+      console.log(month, 'month');
+      console.log(state.clothes, 'clothes');
+      const {img} = state.clothes.find((items) => {
+        return items.month === month;
+      });
+
+      return {
+        ...state,
+        isModalOpen: true,
+      };
+    case clickCloseModal:
+      return {
+        ...state,
+        isModalOpen: false,
+        monthData: [],
+      };
     default:
       throw new Error(`No Matching "${action.type}" - action type`);
   }

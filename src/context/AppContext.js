@@ -1,5 +1,7 @@
-import React, {createContext, useContext, useReducer} from 'react';
+import React, {createContext, useContext, useReducer, useState} from 'react';
 import {
+  clickCloseModal,
+  clickOpenModal,
   GET_DATA,
   SET_GRIDVIEW,
   SET_LISTVIEW,
@@ -16,6 +18,7 @@ const AppContext = createContext();
 
 const AppProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [showPhoto, setShowPhoto] = useState({});
 
   const fetchData = async (year) => {
     dispatch({type: SET_LOADING});
@@ -43,6 +46,30 @@ const AppProvider = ({children}) => {
     dispatch({type: SIDEBAR_CLOSE});
   };
 
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const openModal = (id, idx, month) => {
+    setShowPhoto({id, idx, month});
+    dispatch({type: clickOpenModal, payload: {id, month}});
+  };
+
+  const closeModal = () => {
+    dispatch({type: clickCloseModal});
+  };
+
+  const handleClick = (event) => {
+    const {nodeName} = event.target;
+    if (nodeName === 'IMG') {
+      return;
+    }
+    closeModal();
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -52,6 +79,10 @@ const AppProvider = ({children}) => {
         fetchData,
         controlGridView,
         controlListView,
+        handleScrollTop,
+        openModal,
+        handleClick,
+        showPhoto,
       }}
     >
       {children}

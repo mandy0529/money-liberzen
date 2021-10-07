@@ -42,6 +42,7 @@ const SidebarContainer = styled.div`
     transition: var(--transition);
     cursor: pointer;
     margin-top: 0.2rem;
+    color: black;
   }
   .close-btn:hover {
     font-weight: bold;

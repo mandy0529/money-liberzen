@@ -14,7 +14,7 @@ const Company = () => {
             <img src={fashion1} alt="black-logo" />
             <div className="logo-desc">
               <h3>Founded | 2021 . 08</h3>
-              <h3>CEO | 서 미 령</h3>
+              <h4>CEO | 서 미 령</h4>
               <br />
               <p>
                 liberty + Citizen <br />
@@ -67,6 +67,10 @@ const Wrapper = styled.section`
       font-size: 25px;
       color: #f4f3ee;
       font-weight: bold;
+      span {
+        color: #beb2a2;
+        letter-spacing: 0.4rem;
+      }
     }
   }
   .logo-info:first-child {

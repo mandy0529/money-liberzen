@@ -1,21 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import {contact} from '../assets';
-import {FaFacebookSquare, FaInstagram} from 'react-icons/fa';
+import {FaFacebookSquare, FaInstagram, FaRegBuilding} from 'react-icons/fa';
+import {HiOutlineMailOpen} from 'react-icons/hi';
+import {BsPhone} from 'react-icons/bs';
+import {BiTimeFive} from 'react-icons/bi';
 
 const Contact = () => {
   return (
     <Wrapper>
-      <section className="connect">
-        <img className="video-container" src={contact} alt="contact" />
+      <div className="connect">
         <div className="video-banner">
           <div className="section-title">
             <h2>let's get in touch</h2>
             <div className="underline"></div>
           </div>
-          <div>
+          <div className="contact-info-box">
+            <p className="contact-info">
+              <HiOutlineMailOpen className="contact-icon" />
+              <span className="contact-span">liberzen@naver.com</span>
+            </p>
+            <p className="contact-info">
+              <BsPhone className="contact-icon" />
+              <span className="contact-span">02-1234-5678</span>
+            </p>
+            <p className="contact-info">
+              <FaRegBuilding className="contact-icon" />
+              <span className="contact-span">서울 신당동 승부빌딩</span>
+            </p>
+            <p className="contact-info">
+              <BiTimeFive className="contact-icon" />
+              <span className="contact-span">월 - 금 : 9 AM - 6 PM</span>
+            </p>
+          </div>
+          <div className="contact-footer">
             <span> LIBERZEN</span>
-            <h5>T : 02-2254-2361</h5>
             <h5>
               <a
                 target="_blank"
@@ -34,30 +52,53 @@ const Contact = () => {
             </h5>
           </div>
         </div>
-      </section>
+      </div>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section`
-  min-height: 100vh;
-  margin-top: 50px;
+const Wrapper = styled.main`
+  max-height: 70vh;
+  margin: 5rem 0;
   color: black;
-
+  .connect {
+    display: grid;
+    place-items: center;
+  }
+  .section-title {
+    text-align: center;
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
   .underline {
     width: 8rem;
     height: 0.25rem;
     margin: 2rem auto 2rem auto;
     background: black;
   }
-  div {
-    letter-spacing: 0.2rem;
+  .contact-info {
+    font-size: 1rem;
+    display: flex;
+    .contact-span {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+    }
+    .contact-icon {
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+    &:last-child {
+      margin-bottom: 3rem;
+    }
   }
   span {
     font-weight: bold;
     letter-spacing: 0.4rem;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.3rem;
   }
   h5 {
     margin: 1rem;
@@ -76,28 +117,25 @@ const Wrapper = styled.section`
       opacity: 0.7;
     }
   }
-  .video-banner {
-    padding: 1rem;
-    h5,
-    span {
-      font-size: 1rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
+  .contact-footer {
+    text-align: center;
   }
+
   @media (min-width: 992px) {
-    height: calc(100vh - 5rem);
-    /* grid-template-columns: 1fr 1fr;
-    gap: 8rem; */
-    .video-banner {
-      padding: 3rem 5rem 3rem 5rem;
-      h5,
-      span {
-        font-size: 2.2rem;
-      }
+    margin: 10rem 0;
+    .section-title {
       h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+      }
+    }
+    .contact-info {
+      font-size: 1rem;
+      .contact-span {
+        font-size: 1.2rem;
+      }
+      .contact-icon {
+        font-size: 2rem;
+        margin-right: 1.5rem;
       }
     }
   }

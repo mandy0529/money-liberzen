@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import fasion1 from '../assets/fashion1.jpeg';
-import fasion2 from '../assets/fashion2.jpeg';
+import fasion1 from '../assets/fashion1.jpg';
+import fasion2 from '../assets/fashion2.jpg';
 
 const Hero = () => {
   return (
@@ -38,7 +38,8 @@ const Wrapper = styled.section`
   color: black;
   .main-img {
     width: 100%;
-    height: 280px;
+    height: 450px;
+    margin: 20px auto;
     box-shadow: -1px -1px 62px -5px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -1px -1px 62px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px -1px 62px -5px rgba(0, 0, 0, 0.75);

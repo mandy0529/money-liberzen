@@ -8,30 +8,36 @@ const ShopSort = () => {
   const {clothes, loading, controlListView, controlGridView, grid_view} =
     useGlobalContext();
 
-  let totalProduct = clothes.map((item) => {
-    return item.img.length;
-  });
+  let totalProduct =
+    clothes &&
+    clothes.map((item) => {
+      return item.img && item.img.length;
+    });
 
   return (
     <Wrapper>
-      <div className="btn-container">
-        <button
-          onClick={controlGridView}
-          type="button"
-          className={`${grid_view ? 'active' : null}`}
-        >
-          <BsFillGridFill />
-        </button>
-        <button
-          onClick={controlListView}
-          className={`${!grid_view ? 'active' : null}`}
-          type="button"
-        >
-          <BsList />
-        </button>
-      </div>
-      <p> {!loading && getTotalNumber(totalProduct)} products found</p>
-      <hr />
+      {!loading && (
+        <>
+          <div className="btn-container">
+            <button
+              onClick={controlGridView}
+              type="button"
+              className={`${grid_view ? 'active' : null}`}
+            >
+              <BsFillGridFill />
+            </button>
+            <button
+              onClick={controlListView}
+              className={`${!grid_view ? 'active' : null}`}
+              type="button"
+            >
+              <BsList />
+            </button>
+          </div>
+          <p> {!loading && getTotalNumber(totalProduct)} products found</p>
+          <hr />
+        </>
+      )}
     </Wrapper>
   );
 };

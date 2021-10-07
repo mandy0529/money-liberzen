@@ -18,8 +18,8 @@ const FeaturedProducts = () => {
             .slice(0, 3)}
         </div>
       </div>
-      <Link to="/shop" className="btn">
-        All Products
+      <Link to="/shop/2021" className="btn">
+        더 많은 제품 보러가기
       </Link>
     </Wrapper>
   );

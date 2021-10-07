@@ -1,7 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Loader = () => {
-  return <h1>loading</h1>;
+const Hero = () => {
+  return (
+    <Wrapper className="section">
+      <div className="section-center">
+        <div className="loading"></div>
+      </div>
+    </Wrapper>
+  );
 };
 
-export default Loader;
+const Wrapper = styled.section`
+  @media (min-width: 992px) {
+    height: calc(100vh - 5rem);
+  }
+`;
+export default Hero;

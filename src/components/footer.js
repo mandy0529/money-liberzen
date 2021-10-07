@@ -8,7 +8,6 @@ const Footer = () => {
       <div>
         &copy; {new Date().getFullYear()}
         <span> LIBERZEN</span>
-        <h5>T : 02-2254-2361</h5>
         <h5>
           <a
             target="_blank"
@@ -43,8 +42,9 @@ const Wrapper = styled.footer`
     letter-spacing: 0.2rem;
   }
   span {
-    color: color;
+    color: #beb2a2;
     font-size: 1.3rem;
+    font-weight: bold;
     letter-spacing: 0.3rem;
   }
   h5 {

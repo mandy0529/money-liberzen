@@ -3,12 +3,14 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Error from '../pages/Error';
 import {About, Contact, Home, Shop} from '../pages';
 import {Footer, Navbar, Sidebar} from '.';
+import SideBtn from './SideBtn';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Navbar />
       <Sidebar />
+      <SideBtn />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
