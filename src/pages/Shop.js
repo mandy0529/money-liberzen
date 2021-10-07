@@ -7,7 +7,7 @@ import Modal from '../components/Modal';
 const Shop = () => {
   const {pathname} = useLocation();
   const eachYear = pathname.substr(6, 11);
-
+  console.log(eachYear, 'eachYear');
   return (
     <main style={{backgroundColor: 'white'}}>
       <Modal />
